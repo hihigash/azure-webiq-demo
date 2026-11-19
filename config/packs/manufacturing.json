@@ -1,0 +1,35 @@
+{
+  "id": "manufacturing",
+  "title": "製造業向け Web IQ 比較",
+  "description": "規制、競合 IR、天気・ニュースを同じ質問で比較します。",
+  "scopeName": "manufacturing-public-sources",
+  "allowedDomains": [
+    "env.go.jp",
+    "customs.go.jp",
+    "caa.go.jp",
+    "meti.go.jp",
+    "nite.go.jp",
+    "jisc.go.jp",
+    "echa.europa.eu",
+    "eur-lex.europa.eu",
+    "taxation-customs.ec.europa.eu",
+    "jetro.go.jp",
+    "nipponsteel.com/ir",
+    "nipponsteel.com/news"
+  ],
+  "classifications": [
+    {"name": "公的機関", "domains": ["meti.go.jp", "env.go.jp", "customs.go.jp", "caa.go.jp", "nite.go.jp", "jisc.go.jp", "jetro.go.jp", "eur-lex.europa.eu", "echa.europa.eu", "taxation-customs.ec.europa.eu"]},
+    {"name": "業界団体・規格", "domains": []},
+    {"name": "企業公式・IR", "domains": ["nipponsteel.com"]},
+    {"name": "報道", "domains": []},
+    {"name": "ブログ・まとめ・その他", "domains": []}
+  ],
+  "presets": [
+    {"id": "cbam", "label": "海外規制", "question": "EUのCBAM（炭素国境調整措置）の本格適用で、日本の鉄鋼・アルミ製品を輸出する企業に求められる対応は？", "mode": "lite", "useScope": true},
+    {"id": "reach", "label": "含有化学物質", "question": "REACH規則のSVHC候補リストに最近追加された物質は？", "mode": "lite", "useScope": true},
+    {"id": "ir", "label": "競合調査", "question": "日本製鉄の直近の決算説明資料にある、設備投資の計画と新製品は？", "mode": "lite", "useScope": true},
+    {"id": "weather", "label": "サプライチェーンのリスク", "question": "今週、九州と東海のサプライヤー拠点周辺で出ている気象警報と、操業に関するニュースは？", "mode": "lite", "useScope": false, "responseFilter": ["weather", "news"]},
+    {"id": "recall", "label": "品質・リコール", "question": "同業他社の直近1年のリコールと、その原因の傾向は？", "mode": "advanced", "useScope": true}
+  ]
+}
+

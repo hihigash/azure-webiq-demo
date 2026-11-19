@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.pytest_cache/
+.venv/
+.azure/
+frontend\node_modules/
+frontend\dist/
+*.pyc
+*.log
+

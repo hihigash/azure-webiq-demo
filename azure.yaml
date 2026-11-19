@@ -1,0 +1,24 @@
+name: azure-webiq-comparison
+metadata:
+  template: azure-webiq-comparison@0.1.0
+services:
+  web:
+    project: .
+    language: docker
+    host: containerapp
+    docker:
+      path: ./Dockerfile
+      context: .
+      remoteBuild: true
+hooks:
+  postdeploy:
+    windows:
+      shell: pwsh
+      run: ./scripts/finalize-demo.ps1
+      interactive: false
+    posix:
+      shell: sh
+      run: ./scripts/finalize-demo.sh
+      interactive: false
+
+

@@ -1,0 +1,16 @@
+{
+  "version": "2026-demo-1",
+  "currency": "USD",
+  "model": {
+    "inputPerMillionTokens": null,
+    "outputPerMillionTokens": null,
+    "notes": "実際の契約単価を運用環境で設定してください。"
+  },
+  "search": {
+    "abPerRequest": null,
+    "webIqLitePerRequest": null,
+    "webIqAdvancedPerRequest": null,
+    "notes": "未設定の料金はゼロではなく取得不可として扱います。"
+  }
+}
+
